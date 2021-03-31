@@ -24,7 +24,7 @@ class MovieList extends Component{
                 </h4>
                 <h5>{data.releaseYear}</h5>
                
-                <p className="card-text">{data.description}</p>
+                <p className="card-text">{data.description.substr(0,50)+'...'}</p>
               </div>
               <div className="card-footer">
                 <small className="text-muted">{data.rating}</small>

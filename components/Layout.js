@@ -5,6 +5,8 @@ import Router from 'next/router';
 import Navbar from './Navbar';
 import NProgess from 'nprogress';
 
+import {useState} from 'react';
+
 
 Router.onRouteChangeStart = url=>{
     NProgess.start();
@@ -19,7 +21,13 @@ Router.onRouteChangeError = url=>{
 }
 
 
+
 const Layout = ({children,title})=>{
+
+    
+
+   
+
     return(
         <div>
             <Head>

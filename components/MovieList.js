@@ -1,10 +1,40 @@
 import React ,{Component} from 'react'
 
 class MovieList extends Component{
-    render(){
+    
+  render(){
+    const {count,movie_data} = this.props
     return(
         <div className="row">
 
+      {/* {
+        movie_data.map((data)=>{
+          console.log(data.id)
+        })
+      } */}
+
+        {movie_data.map(data=>{
+          return(
+            <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100">
+              <a href="#"><img className="card-img-top" src={data.image} alt="" /></a>
+              <div className="card-body">
+                <h4 className="card-title">
+                  <a href="#">{data.name}</a>
+                </h4>
+                <h5>{data.releaseYear}</h5>
+               
+                <p className="card-text">{data.description}</p>
+              </div>
+              <div className="card-footer">
+                <small className="text-muted">{data.rating}</small>
+              </div>
+            </div>
+          </div>
+          )
+        })}
+
+{/* 
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="card h-100">
               <a href="#"><img className="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
@@ -100,6 +130,9 @@ class MovieList extends Component{
               </div>
             </div>
           </div>
+ */}
+
+
         </div>
     )
     }

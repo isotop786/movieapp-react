@@ -1,11 +1,21 @@
-
-const Carousel = ()=>{
+import React,{Fragment} from 'react';
+const Carousel = ({movies})=>{
     return(
-        <div id="carouselExampleIndicators" className="carousel slide my-4" data-ride="carousel">
+
+     <React.Fragment>
+
+     
+    
+          <div id="carouselExampleIndicators" className="carousel slide my-4" data-ride="carousel">
         <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+          {
+            movies.map(mv=>(
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+            ))
+          }
+          {/* <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
         </ol>
         <div className="carousel-inner" role="listbox">
           <div className="carousel-item active">
@@ -27,6 +37,15 @@ const Carousel = ()=>{
           <span className="sr-only">Next</span>
         </a>
       </div>
+    
+ 
+
+
+
+
+     </React.Fragment>
+
+       
     )
 }
 

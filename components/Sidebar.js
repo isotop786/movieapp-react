@@ -1,14 +1,22 @@
 
+import {useState} from 'react';
 
-const Sidebar = ()=>{
-    return(
+const Sidebar = (props)=>{
+
+  const {count,appName} = props
+
+
+  return(
         <div className="col-lg-3">
 
-        <h1 className="my-4">Shop Name</h1>
+        <h1 className="my-4">{appName}</h1>
         <div className="list-group">
-          <a href="#" className="list-group-item">Category 1</a>
+          <a href="#" onClick={props.clickHandler} className="list-group-item">Category 1</a>
           <a href="#" className="list-group-item">Category 2</a>
           <a href="#" className="list-group-item">Category 3</a>
+
+      <h3>{count}</h3>
+         
         </div>
 
       </div>

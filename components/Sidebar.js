@@ -14,8 +14,6 @@ const Sidebar = (props)=>{
           <a href="#" onClick={props.clickHandler} className="list-group-item">Category 1</a>
           <a href="#" className="list-group-item">Category 2</a>
           <a href="#" className="list-group-item">Category 3</a>
-
-      <h3>{count}</h3>
          
         </div>
 

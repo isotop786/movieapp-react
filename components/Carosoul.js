@@ -8,11 +8,11 @@ const Carousel = ({movies})=>{
     
           <div id="carouselExampleIndicators" className="carousel slide my-4" data-ride="carousel">
         <ol className="carousel-indicators">
-          {
+          {/* {
             movies.map(mv=>(
               <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
             ))
-          }
+          } */}
           {/* <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}

@@ -53,11 +53,7 @@ const Layout = ({children,title})=>{
                 {children}
             </body>
 
-<footer className="py-3 bg-dark ">
-    <div className="container">
-      <p className="m-0 text-center text-white">Copyright &copy; Your Website {new Date().getFullYear()}</p>
-    </div>
-  </footer>
+
         </div>
     )
 }

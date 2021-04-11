@@ -1,12 +1,12 @@
-import Layout from '../components/Layout';
+
 import Head from 'next/head'
-const Contact = ()=>(
-    <Layout title="Contact Us">
+const Contact = (props)=>(
+    <div title="Contact Us">
         <Head>
-            <title>Contact page</title>
+            <title>{props.title}</title>
         </Head>
 
-    </Layout>
+    </div>
 )
 
 export default Contact;

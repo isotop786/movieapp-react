@@ -2,7 +2,6 @@ import React ,{Component} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Carousel from '../components/Carosoul';
 import MovieList from '../components/MovieList';
@@ -15,6 +14,8 @@ import {getMovies} from '../actions'
 
 const Home = (props)=>{
   
+  const {movies} = props
+
   // const [movieState, setMovie] = useState([])
   
 
@@ -27,14 +28,14 @@ const Home = (props)=>{
   //   })
   // },[])
   
-    // getMovies().then((movies )=>{
-    //   setMovie(movies)
-    // })
+  //   getMovies().then((movies )=>{
+  //     setMovie(movies)
+  //   })
     
     
     return(
     
-        <Layout>
+
  
 
 
@@ -59,7 +60,7 @@ const Home = (props)=>{
 
         
         {/* MovieList */}
-        <MovieList movie_data={props.movies}/>
+        <MovieList movie_data={ movies||[]}/>
 
 
       </div>
@@ -67,7 +68,6 @@ const Home = (props)=>{
   </div>
 
 
-  </Layout>
 
 
 

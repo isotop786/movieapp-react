@@ -1,12 +1,12 @@
-import Layout from '../components/Layout';
+// import Layout from '../components/Layout';
 import Head from 'next/head';
 
 const Services = () =>(
-    <Layout title="Our Services">
+    <div title="Our Services">
         <Head>
             <title>Services</title>
         </Head>
-    </Layout>
+    </div>
 )
 
 export default Services;

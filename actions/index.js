@@ -50,6 +50,35 @@ const MOVIE_DATA =[
   }
 
 
-  getMovies.getInitialProps = async ()=>{
- 
-  }
+
+  // export const getMovieById =(id)=>{
+   
+  //   return new Promise((resolve, reject)=>{
+  //     const movieIndex = MOVIE_DATA.findIndex((m)=>{
+  //         return m.id == id;
+  //     })
+  //     const movie = MOVIE_DATA[movieIndex];
+  //     setTimeout(()=>{
+  //       resolve(movie)
+  //     },50)
+  //   })
+
+  // }
+
+
+
+export const getMovieById = async (id)=>{
+
+    return new Promise((resolve,reject)=>{
+      const movieIndex = MOVIE_DATA.findIndex(movie =>{
+        return movie.id === id
+      })
+
+      const movie = MOVIE_DATA[movieIndex];
+
+      setTimeout(()=>{
+        resolve(movie)
+      },40)
+    })
+
+}

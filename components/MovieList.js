@@ -1,4 +1,5 @@
 import React ,{Component} from 'react'
+import Link from 'next/link';
 
 class MovieList extends Component{
     
@@ -25,7 +26,7 @@ class MovieList extends Component{
               <a href="#"><img className="card-img-top" src={data.image} alt="" /></a>
               <div className="card-body">
                 <h4 className="card-title">
-                  <a href="#">{data.name}</a>
+                  <Link href={`movies/${data.id}`}><a>{data.name}</a></Link>
                 </h4>
                 <h5>{data.releaseYear}</h5>
                

@@ -7,6 +7,7 @@ import Carousel from '../components/Carosoul';
 import MovieList from '../components/MovieList';
 import {useState,useEffect} from 'react';
 import {getMovies} from '../actions'
+import {useRouter} from 'next/router';
 
 
 
@@ -14,7 +15,10 @@ import {getMovies} from '../actions'
 
 const Home = (props)=>{
   
-  const {movies} = props
+  const {movies} = props;
+  const {image} = props;
+
+  const router = useRouter();
 
   // const [movieState, setMovie] = useState([])
   
@@ -32,6 +36,7 @@ const Home = (props)=>{
   //     setMovie(movies)
   //   })
     
+  console.log(router.asPath)
     
     return(
     
@@ -52,7 +57,7 @@ const Home = (props)=>{
       <div className="col-lg-9">
       {/* Carosoule */}
 
-      <Carousel/>
+      <Carousel image={image}/>
       <div className="d-flex justify-content-space-between">
       </div>
 
@@ -77,8 +82,19 @@ const Home = (props)=>{
 Home.getInitialProps = async ()=>{
   const movies = await getMovies();
 
+  const image = await movies.map(m=>{
+    return(
+      {
+        id:`image-${m.id}`,
+        image: m.image
+      }
+    )
+  }
+   
+  )
+
   return{
-    movies
+    movies, image
   }
 }
 
